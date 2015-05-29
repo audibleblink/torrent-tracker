@@ -1,0 +1,1 @@
+*/5 * * * * DATE_DIR=`date +\%Y/\%m/\%d/\%H`; OUT_DIR=$HOME/torrenter_logs/$DATE_DIR; mkdir -p $OUT_DIR; /usr/bin/ruby /Users/alex/log_torrents.rb > $OUT_DIR/`date +\%M` 2>/$OUT_DIR/log

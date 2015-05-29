@@ -1,0 +1,5 @@
+#!/usr/bin/env sh     
+
+#This file lives on the network's router                                                                                                                                                
+conns=`conntrack -L | grep -v 'dport=\(443\|993\|80\|5000\|5222\|5223\|5228\|53\|123\)' | grep udp | awk '{print $4}'| sed s/^src=// | sort | uniq -c`                
+echo "$conns"  
